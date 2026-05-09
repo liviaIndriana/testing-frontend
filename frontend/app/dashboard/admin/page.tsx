@@ -4,8 +4,8 @@ import { useAuth } from "@/features/auth/login/hooks/use-auth";
 import Image from "next/image"
 
 export default function HomePage() {
-    const { isChecking } = useAuth();
-    if (isChecking) return null; 
+    // const { isChecking } = useAuth();
+    // if (isChecking) return null; 
     return (
         <div className="h-[calc(100vh-64px)] relative overflow-hidden">
 
