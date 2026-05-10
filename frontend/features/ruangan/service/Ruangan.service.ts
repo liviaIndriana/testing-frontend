@@ -3,8 +3,8 @@ import { Ruangan } from "../types/Ruangan.type"
 
 // GET ALL
 export async function getRuangans(): Promise<Ruangan[]> {
-  const res = await api.get("/ruangan")
-  return res.data
+  const res = await api.get("/api/ruangan")
+  return res.data.data
 }
 
 // UPDATE

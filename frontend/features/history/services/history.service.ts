@@ -13,3 +13,4 @@ export async function updateHistoryStatus(
     const res = await api.patch(`/history/${id}`, { status })
     return res.data
 }
+
