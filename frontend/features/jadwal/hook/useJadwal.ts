@@ -9,7 +9,7 @@ const schema = z.object({
     kelas: z.string().min(1, "Kelas wajib diisi"),
     tanggal: z.string().min(1, "Tanggal wajib diisi"),
     waktu_mulai: z.string().min(1, "Waktu mulai wajib diisi"),
-    waktu_selesai: z.string().min(1, "Waktu selesai wajib diisi"),
+    waktu_berakhir: z.string().min(1, "Waktu berakhir wajib diisi"),
     ruangan: z.string().min(1, "Ruangan wajib diisi"),
 });
 

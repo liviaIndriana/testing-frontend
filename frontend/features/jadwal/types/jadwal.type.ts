@@ -2,7 +2,7 @@ export type JadwalDto = {
     kelas: string;
     tanggal: string;
     waktu_mulai: string;
-    waktu_selesai: string;
+    waktu_berakhir: string;
     ruangan: string;
 };
 
