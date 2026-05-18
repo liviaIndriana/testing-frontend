@@ -14,7 +14,7 @@ export default function JadwalForm() {
     kelas: "",
     tanggal: "",
     waktu_mulai: "",
-    waktu_selesai: "",
+    waktu_berakhir: "",
     ruangan: "",
   });
 
@@ -62,7 +62,10 @@ export default function JadwalForm() {
                 type="date"
                 value={form.tanggal}
                 onChange={(e) =>
-                  setForm({ ...form, tanggal: e.target.value })
+                  setForm({
+                    ...form,
+                    tanggal: e.target.value.replaceAll("/", "-"),
+                  })
                 }
                 className="h-12 sm:h-14 border-[3px] rounded-xl sm:rounded-2xl focus-visible:ring-0"
                 style={{ borderColor: "#F4B539" }}
@@ -96,16 +99,16 @@ export default function JadwalForm() {
               <Label className="text-[#30418F]">Waktu Berakhir</Label>
               <Input
                 type="time"
-                value={form.waktu_selesai}
+                value={form.waktu_berakhir}
                 onChange={(e) =>
-                  setForm({ ...form, waktu_selesai: e.target.value })
+                  setForm({ ...form, waktu_berakhir: e.target.value })
                 }
                 className="h-12 sm:h-14 border-[3px] rounded-xl sm:rounded-2xl focus-visible:ring-0"
                 style={{ borderColor: "#F4B539" }}
               />
-              {errors.waktu_selesai && (
+              {errors.waktu_berakhir && (
                 <p className="text-xs text-red-500">
-                  {errors.waktu_selesai}
+                  {errors.waktu_berakhir}
                 </p>
               )}
             </div>
@@ -138,7 +141,7 @@ export default function JadwalForm() {
                     kelas: "",
                     tanggal: "",
                     waktu_mulai: "",
-                    waktu_selesai: "",
+                    waktu_berakhir: "",
                     ruangan: "",
                   })
                 }

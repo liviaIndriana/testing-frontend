@@ -20,6 +20,7 @@ import { toast } from "sonner"
 import {
     Dialog,
     DialogContent,
+    DialogDescription,
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog"
@@ -230,9 +231,9 @@ export default function RuanganTable() {
                 </DialogTitle>
                 </DialogHeader>
 
-                <p className="text-sm text-gray-600 mt-2">
-                Yakin ingin menghapus data ini?
-                </p>
+                <DialogDescription className="text-sm text-gray-600 mt-2">
+                    Yakin ingin menghapus data user ini?
+                </DialogDescription>
 
                 <div className="flex justify-end gap-3 mt-6">
                 <Button
