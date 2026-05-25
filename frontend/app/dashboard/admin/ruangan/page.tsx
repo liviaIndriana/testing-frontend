@@ -4,7 +4,7 @@ import RuanganTable from "@/features/ruangan/components/RuanganTable"
 
 
 export default function HistoryPage() {
-  // const { isChecking } = useAuth();
-  // if (isChecking) return null; 
+  const { isChecking } = useAuth();
+  if (isChecking) return null; 
   return <RuanganTable/>
 }
