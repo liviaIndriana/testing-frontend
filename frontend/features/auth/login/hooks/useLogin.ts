@@ -59,9 +59,11 @@ export const useLogin = () => {
             toast.success("Login berhasil");
 
             // Redirect ke dashbard seuai role
-            if (user.role === "admin") {
+            const role = user.role.toLowerCase();
+
+            if (role === "admin") {
                 router.push("/dashboard/admin");
-            } else if (user.role === "dosen" || user.role === "mahasiswa") {
+            } else if (role === "dosen" || role === "mahasiswa") {
                 router.push("/dashboard/user");
             } else {
                 router.push("/");
