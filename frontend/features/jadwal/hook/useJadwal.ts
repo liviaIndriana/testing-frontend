@@ -55,7 +55,7 @@ export const useJadwal = () => {
         toast.success("Jadwal berhasil dibuat");
         } catch (err: any) {
         toast.error(
-            err?.response?.data?.error ||
+            err?.response?.data?.message ||
             "Gagal membuat jadwal"
         );
         } finally {
