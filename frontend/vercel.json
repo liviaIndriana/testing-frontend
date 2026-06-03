@@ -11,6 +11,10 @@
     {
       "source": "/history/:path*",
       "destination": "http://43.157.248.229:8081/history/:path*"
+    },
+    {
+      "source": "/peminjaman",
+      "destination": "http://43.157.248.229:8081/peminjaman"
     }
   ]
 }
